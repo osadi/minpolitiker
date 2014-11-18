@@ -1,0 +1,84 @@
+@import "../../../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap";
+@import "../../../bower_components/jeet.gs/scss/jeet/index";
+
+
+//@include edit();
+
+.wrapper {
+	@include center(1170px);
+	max-width: 1170px;
+}
+
+.main {
+	@include col(6/10);
+}
+
+.sidebar {
+	@include col(4/10);
+}
+
+.right {
+	text-align: right;
+}
+
+.chosen {
+	border: 1px solid #2e6da4;
+	background-color: #337ab7;
+}
+
+form {
+	textarea, .form-control {
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box; 
+		width:100%;
+	}
+	textarea {
+		margin-bottom: 10px;
+	}
+	.hidden {
+		display:none;
+	}
+}
+
+img {
+	display: block;
+	width: 100%;
+}
+
+.text {
+	display: none;
+}
+
+article {
+
+	padding: 10px;
+	border: 1px solid #fff;
+	margin-bottom: 10px;
+
+	&:hover {
+		cursor: pointer; cursor: hand;
+		border: 1px solid #2e6da4;
+	}
+
+	@include cf();
+
+	.info {
+		@include col(4/6);
+	}
+
+	.circle {
+		@include col(2/6);
+
+		img {
+			display: inline-block;
+			width: 100px;
+			height: 100px;
+			-webkit-border-radius: 50px;
+			-moz-border-radius: 50px;
+			-ms-border-radius: 50px;
+			-o-border-radius: 50px;
+		    border-radius: 50px;
+		}
+	}
+}
