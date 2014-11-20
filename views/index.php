@@ -9,7 +9,7 @@
 
   <title>minpolitiker.se</title>
   <meta name="description" content="minpolitiker.se">
-  <meta name="author" content="SitePoint">
+  <meta name="author" content="minpolitiker.se">
 
 
   <link rel="stylesheet" href="css/stylesheets/screen.css">
@@ -65,19 +65,19 @@ Med vänliga hälsningar
 				<article>
 					<div class="circle"><span class="icon-mail mail-icon"></span></div>
 					<div class="info">
-						<h2>Maila alla</h2>
-						<p>I hela kommunfullmäktige</p>
+						<h2>Skicka till alla</h2>
+						<p>Detta alternativ skickar ditt mail till alla de adresser vi har kunnat hitta för politiker i kommunfullmäktige, Borås.</p>
 					</div>
 				</article>
 				<?php
 					foreach ($recipients as $key => $recipient) {
+						$leader = $recipient['members'][$recipient['leader-key']];
 						?>
 						<article>
 							<div class="circle"><img src="img/<?php echo $key ?>.png"></div>
 							<div class="info">
-								<h2><?php echo $recipient['name']; ?></h2>
-								<p><?php echo $recipient['party']; ?></p>
-								<div class="text"><?php echo $recipient['text']; ?></div>
+								<h2><?php echo $leader['name']; ?></h2>
+								<p><?php echo $recipient['party-short']; ?></p>
 								<input type="checkbox" name="chosen[]" class="hidden" value="<?php echo $key; ?>" />
 							</div>
 						</article>
