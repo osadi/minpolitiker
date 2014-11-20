@@ -47,7 +47,7 @@ Hej,
 
 I valrörelsen var alliansen och det rödgröna överens om att de aldrig skulle medverka till att ge Sverigedemokraterna något politiskt inflytande i Borås. De senaste dagarna verkar det som om allianspartierna öppnar upp för att rösta igenom sitt budgetförslag med hjälp av Sverigedemokraterna. Att medverka till att ge det högerextrema partiet Sverigedemokraterna makten över våra liv är ett svek mot de löften som gavs i valrörelsen. Ni lovade att aldrig samarbeta med rasister!
 
-Genom att ge Sverigedemokraterna inflytande i vår stad ser ni till att normalisera rasism. Att göra det ok att säga, att vissa människor är mer värda och har större rättigheter än andra. Det är inte vad ni lovade.
+Genom att ge Sverigedemokraterna inflytande i vår stad ser ni till att normalisera rasism. Att göra det ok att säga att vissa människor är mer värda och har större rättigheter än andra. Det är inte vad ni lovade.
 
 Vi i Borås Tillsammans verkar för mer gemenskap, öppenhet och tolerans i Borås. Sverigedemokraterna står för något helt annat. Vi kräver att alla icke-rasistiska partier i Borås tar sitt ansvar och håller vad ni lovade, att inte ge rasister inflytande över våra liv. Det var vad 89 % av boråsarna röstade för i valet. Det är dags att ni står för vad ni lovade!
 
