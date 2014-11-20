@@ -5,7 +5,7 @@
 // Default values
 // Comments
 
-define('DEBUG', TRUE);
+define('DEBUG', FALSE);
 
 // Simple simple captcha thingie
 if (strtolower($_POST['question']) != 'ja') {
@@ -47,6 +47,7 @@ $headers .= "Sender: info@minpolitiker.se \r\n";
 $headers .= "Return-Path: info@minpolitiker.se \r\n";
 $headers .= "Reply-To: $email \r\n";
 $headers .= "BCC: " . implode(',', $emails) . "\r\n";
+$headers .= "Content-Type: text/html; charset=UTF-8 \r\n";
 
 if (DEBUG == TRUE) {
 	var_dump($subject);

@@ -52,6 +52,7 @@ Genom att ge Sverigedemokraterna inflytande i vår stad ser ni till att normalis
 Vi i Borås Tillsammans verkar för mer gemenskap, öppenhet och tolerans i Borås. Sverigedemokraterna står för något helt annat. Vi kräver att alla icke-rasistiska partier i Borås tar sitt ansvar och håller vad ni lovade, att inte ge rasister inflytande över våra liv. Det var vad 89 % av boråsarna röstade för i valet. Det är dags att ni står för vad ni lovade!
 
 Med vänliga hälsningar
+
 [namn - fyller du i fältet namn ändras detta automatiskt]</textarea>
 					</div>
 					<div class="form-group"><label for="name">Ditt namn</label><input type="text" class="form-control" name="name" id="name"></div>
