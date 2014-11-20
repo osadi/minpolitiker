@@ -16,7 +16,12 @@ $("article").on({
 
 
 
-$('article').on('click', function(){
+$('.all, .leader').on('click', function(){
+    if (this.className.indexOf('all') > -1) {
+        $('article').not(this).each(function(){
+         $(this).toggleClass('hidden');
+     });
+    }
 	$(this).toggleClass('chosen');
 	$chosen = $(this).find('input[name="chosen[]"]');
 	$chosen.prop("checked", !$chosen.prop("checked"));

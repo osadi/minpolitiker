@@ -3970,29 +3970,29 @@ img {
 }
 
 /* line 53, ../sass/screen.scss */
-article {
+.leader, .all {
   padding: 10px;
   border: 1px solid #fff;
   margin-bottom: 10px;
   *zoom: 1;
 }
-/* line 59, ../sass/screen.scss */
-article:hover {
-  cursor: pointer;
-  cursor: hand;
-  border: 1px solid #2e6da4;
-}
 /* line 344, ../../../bower_components/jeet.gs/scss/jeet/_grid.scss */
-article:before, article:after {
+.leader:before, .leader:after, .all:before, .all:after {
   content: '';
   display: table;
 }
 /* line 349, ../../../bower_components/jeet.gs/scss/jeet/_grid.scss */
-article:after {
+.leader:after, .all:after {
   clear: both;
 }
+/* line 61, ../sass/screen.scss */
+.leader:hover, .all:hover {
+  cursor: pointer;
+  cursor: hand;
+  border: 1px solid #2e6da4;
+}
 /* line 66, ../sass/screen.scss */
-article .info {
+.leader .info, .all .info {
   *zoom: 1;
   float: left;
   clear: none;
@@ -4002,20 +4002,20 @@ article .info {
   margin-right: 3%;
 }
 /* line 344, ../../../bower_components/jeet.gs/scss/jeet/_grid.scss */
-article .info:before, article .info:after {
+.leader .info:before, .leader .info:after, .all .info:before, .all .info:after {
   content: '';
   display: table;
 }
 /* line 349, ../../../bower_components/jeet.gs/scss/jeet/_grid.scss */
-article .info:after {
+.leader .info:after, .all .info:after {
   clear: both;
 }
 /* line 58, ../../../bower_components/jeet.gs/scss/jeet/_grid.scss */
-article .info:last-child {
+.leader .info:last-child, .all .info:last-child {
   margin-right: 0%;
 }
 /* line 70, ../sass/screen.scss */
-article .circle {
+.leader .circle, .all .circle {
   *zoom: 1;
   float: left;
   clear: none;
@@ -4025,20 +4025,20 @@ article .circle {
   margin-right: 3%;
 }
 /* line 344, ../../../bower_components/jeet.gs/scss/jeet/_grid.scss */
-article .circle:before, article .circle:after {
+.leader .circle:before, .leader .circle:after, .all .circle:before, .all .circle:after {
   content: '';
   display: table;
 }
 /* line 349, ../../../bower_components/jeet.gs/scss/jeet/_grid.scss */
-article .circle:after {
+.leader .circle:after, .all .circle:after {
   clear: both;
 }
 /* line 58, ../../../bower_components/jeet.gs/scss/jeet/_grid.scss */
-article .circle:last-child {
+.leader .circle:last-child, .all .circle:last-child {
   margin-right: 0%;
 }
 /* line 73, ../sass/screen.scss */
-article .circle img, article .circle span {
+.leader .circle img, .leader .circle span, .all .circle img, .all .circle span {
   display: inline-block;
   width: 100px;
   height: 100px;
@@ -4049,7 +4049,7 @@ article .circle img, article .circle span {
   border-radius: 50px;
 }
 /* line 84, ../sass/screen.scss */
-article .circle .mail-icon {
+.leader .circle .mail-icon, .all .circle .mail-icon {
   font-size: 60px;
   padding: 20px;
 }

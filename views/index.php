@@ -62,23 +62,28 @@ Med vänliga hälsningar
 			</div>
 
 			<div class="sidebar">
-				<article>
+				<article class="all">
 					<div class="circle"><span class="icon-mail mail-icon"></span></div>
 					<div class="info">
 						<h2>Skicka till alla</h2>
 						<p>Detta alternativ skickar ditt mail till alla de adresser vi har kunnat hitta för politiker i kommunfullmäktige, Borås.</p>
+						<input type="checkbox" name="chosen[]" class="hidden" value="all" />
 					</div>
+				</article>
+				<article>
+					<h3>Eller välj de du tycker är viktigast:</h3>
 				</article>
 				<?php
 					foreach ($recipients as $key => $recipient) {
-						$leader = $recipient['members'][$recipient['leader-key']];
+						$leaderKey = $recipient['leader-key'];
+						$leader    = $recipient['members'][$leaderKey];
 						?>
-						<article>
+						<article class="leader">
 							<div class="circle"><img src="img/<?php echo $key ?>.png"></div>
 							<div class="info">
-								<h2><?php echo $leader['name']; ?></h2>
-								<p><?php echo $recipient['party-short']; ?></p>
-								<input type="checkbox" name="chosen[]" class="hidden" value="<?php echo $key; ?>" />
+								<h3><?php echo $leader['name']; ?></h3>
+								<p><?php echo $recipient['party-long'] .' ('. $recipient['party-short'] .')' ; ?></p>
+								<input type="checkbox" name="chosen[]" class="hidden" value="<?php echo $key .'_'. $leaderKey; ?>" />
 							</div>
 						</article>
 						<?php

@@ -1,4 +1,11 @@
 <?php
+// ToDo: 
+// Sanity checks
+// Validation
+// Default values
+// Comments
+
+define('DEBUG', TRUE);
 
 // Simple simple captcha thingie
 if (strtolower($_POST['question']) != 'ja') {
@@ -7,7 +14,7 @@ if (strtolower($_POST['question']) != 'ja') {
 }
 
 if (empty($_POST['mail-body']) ||
-	empty($_POST['chosen'])    ||
+	empty($_POST['chosen'])    || 
 	empty($_POST['email'])     ||
 	empty($_POST['name'])      ) {
 		header('Location: /');
@@ -22,21 +29,32 @@ $message = $_POST['mail-body'];
 $chosen  = $_POST['chosen'];
 $subject = $_POST['subject'];
 
-// ToDo: Sanity checks and default values
-
-foreach ($chosen as $id) {
-	$emails[] = $recipients[$id]['email'];
+if (in_array('all', $chosen)) {
+	foreach ($recipients as $key => $party) {
+		foreach ($party['members'] as $key => $member) {
+			$emails[] = $member['email'];
+		}
+	}
+} else {
+	foreach ($chosen as $key) {
+		list($partyKey, $memberKey) = explode('_', $key);
+		$emails[] = $recipients[$partyKey]['members'][$memberKey]['email'];
+	}	
 }
 
-$headers = 'From: '. $name .' <info@minpolitiker.se>' . "\r\n" .
-    'Reply-To: '.  $replyTo . "\r\n";
+$headers  = "From: $name <$email> \r\n";
+$headers .= "Sender: info@minpolitiker.se \r\n";
+$headers .= "Return-Path: info@minpolitiker.se \r\n";
+$headers .= "Reply-To: $email \r\n";
+$headers .= "BCC: " . implode(',', $emails) . "\r\n";
 
-$headers = "From: $name <$email> \r\n" .
-	"Sender: info@minpolitiker.se \r\n" .
-	"Return-Path: info@minpolitiker.se \r\n" .
-	"Reply-To: $email \r\n";
-
-$result = mail(implode(',', $emails), $subject, $message, $headers);
-
-header('Location: /skickat');
-exit();
+if (DEBUG == TRUE) {
+	var_dump($subject);
+	var_dump($message);
+	var_dump($headers);
+	die();
+} else {
+	//$result = mail(null, $subject, $message, $headers);
+	header('Location: /skickat');
+	exit();
+}

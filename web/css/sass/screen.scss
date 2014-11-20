@@ -50,18 +50,18 @@ img {
 	display: none;
 }
 
-article {
+.leader, .all {
 
 	padding: 10px;
 	border: 1px solid #fff;
 	margin-bottom: 10px;
 
+	@include cf();
+
 	&:hover {
 		cursor: pointer; cursor: hand;
 		border: 1px solid #2e6da4;
 	}
-
-	@include cf();
 
 	.info {
 		@include col(4/6);
