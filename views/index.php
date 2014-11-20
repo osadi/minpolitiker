@@ -55,7 +55,7 @@ Med vänliga hälsningar
 [namn - fyller du i fältet namn ändras detta automatiskt]</textarea>
 					</div>
 					<div class="form-group"><label for="name">Ditt namn</label><input type="text" class="form-control" name="name" id="name"></div>
-					<div class="form-group"><label for="email">Din epost</label><input type="text" class="form-control" name="email" id="email"></div>
+					<div class="form-group"><label for="email">Din epost</label><input type="email" class="form-control" name="email" id="email"></div>
 					<div class="form-group"><label for="question">Är alla människor lika mycket värda?</label><input type="text" class="form-control" name="question" id="question"></div>
 					<p class="right"><input type="submit" value="Skicka" class="btn btn-primary"></p>
 				</div>
