@@ -22,11 +22,12 @@ $message = $_POST['mail-body'];
 $chosen  = $_POST['chosen'];
 $subject = $_POST['subject'];
 
+// ToDo: Sanity checks and default values
+
 foreach ($chosen as $id) {
 	$emails[] = $recipients[$id]['email'];
 }
 
-//mail(implode(',', $emails), 'My subject', $message);
 $headers = 'From: '. $name .' <info@minpolitiker.se>' . "\r\n" .
     'Reply-To: '.  $replyTo . "\r\n";
 
@@ -34,8 +35,6 @@ $headers = "From: $name <$email> \r\n" .
 	"Sender: info@minpolitiker.se \r\n" .
 	"Return-Path: info@minpolitiker.se \r\n" .
 	"Reply-To: $email \r\n";
-
-$subject = '[TEST] - Du lovade oss';
 
 $result = mail(implode(',', $emails), $subject, $message, $headers);
 
