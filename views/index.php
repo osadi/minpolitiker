@@ -3,12 +3,12 @@
 ?>
 <!doctype html>
 
-<html lang="en">
+<html lang="sv">
 <head>
   <meta charset="utf-8">
 
-  <title>minapolitiker.se</title>
-  <meta name="description" content="The HTML5 Herald">
+  <title>minpolitiker.se</title>
+  <meta name="description" content="minpolitiker.se">
   <meta name="author" content="SitePoint">
 
 
@@ -29,39 +29,31 @@
 					<h1>minpolitiker.se</h1>
 					<h4>Direktkontakt med dina kommunalpolitiker.</h4>
 					<div class="info-box">
-						<p>Håll muspekaren över en politiker för att få veta mer.</p>
+						<ul>
+							<li>Markera en eller flera ledamöter som du vill skriva till.</li>
+							<li>Använd den färdiga mallen eller skriv ett eget mail.</li>
+							<li>Fyll i namn samt mail - tryck skicka!</li>
+						</ul>					
 					</div>
 				</div>
 				<div>
 					<h2>Mail</h2>
 				</div>
 				<div class="mailbox">
-					<textarea class="form-control" rows="8" name="mail-body">
+					<div class="form-group"><label for="subject">Rubrik</label><input type="text" class="form-control" name="subject" id="subject" value="Du lovade oss"></div>
+					<div class="form-group"><label for="mail-body">Meddelande</label>
+						<textarea class="form-control" rows="8" name="mail-body" id="mail-body">
 Hej,
 
-I valrörelsen var alliansen och det rödgröna överens om att de aldrig 
-skulle medverka till att ge Sverigedemokraterna något politiskt 
-inflytande i Borås. De senaste dagarna verkar det som om 
-allianspartierna öppnar upp för att rösta igenom sitt budgetförslag 
-med hjälp av Sverigedemokraterna. Att medverka till att ge det 
-högerextrema partiet Sverigedemokraterna makten över våra liv är ett 
-svek mot de löften som gavs i valrörelsen. Ni lovade att aldrig 
-samarbeta med rasister! 
+I valrörelsen var alliansen och det rödgröna överens om att de aldrig skulle medverka till att ge Sverigedemokraterna något politiskt inflytande i Borås. De senaste dagarna verkar det som om allianspartierna öppnar upp för att rösta igenom sitt budgetförslag med hjälp av Sverigedemokraterna. Att medverka till att ge det högerextrema partiet Sverigedemokraterna makten över våra liv är ett svek mot de löften som gavs i valrörelsen. Ni lovade att aldrig samarbeta med rasister!
 
-Genom att ge Sverigedemokraterna inflytande i vår stad ser ni till att 
-normalisera rasism. Att göra det ok att säga, att vissa människor är 
-mer värda och har större rättigheter än andra. Det är inte vad ni 
-lovade. 
+Genom att ge Sverigedemokraterna inflytande i vår stad ser ni till att normalisera rasism. Att göra det ok att säga, att vissa människor är mer värda och har större rättigheter än andra. Det är inte vad ni lovade.
 
-Vi i Borås Tillsammans verkar för mer gemenskap, öppenhet och tolerans 
-i Borås. Sverigedemokraterna står för något helt annat. Vi kräver att 
-alla icke-rasistiska partier i Borås tar sitt ansvar och håller vad ni 
-lovade, att inte ge rasister inflytande över våra liv. Det var vad 89 
-% av boråsarna röstade för i valet. Det är dags att ni står för vad ni 
-lovade! 
+Vi i Borås Tillsammans verkar för mer gemenskap, öppenhet och tolerans i Borås. Sverigedemokraterna står för något helt annat. Vi kräver att alla icke-rasistiska partier i Borås tar sitt ansvar och håller vad ni lovade, att inte ge rasister inflytande över våra liv. Det var vad 89 % av boråsarna röstade för i valet. Det är dags att ni står för vad ni lovade!
 
 Med vänliga hälsningar
 [namn - fyller du i fältet namn ändras detta automatiskt]</textarea>
+					</div>
 					<div class="form-group"><label for="name">Ditt namn</label><input type="text" class="form-control" name="name" id="name"></div>
 					<div class="form-group"><label for="email">Din epost</label><input type="text" class="form-control" name="email" id="email"></div>
 					<div class="form-group"><label for="question">Är alla människor lika mycket värda?</label><input type="text" class="form-control" name="question" id="question"></div>
@@ -70,6 +62,13 @@ Med vänliga hälsningar
 			</div>
 
 			<div class="sidebar">
+				<article>
+					<div class="circle"><span class="icon-mail mail-icon"></span></div>
+					<div class="info">
+						<h2>Maila alla</h2>
+						<p>I hela kommunfullmäktige</p>
+					</div>
+				</article>
 				<?php
 					foreach ($recipients as $key => $recipient) {
 						?>

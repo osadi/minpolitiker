@@ -1,4 +1,5 @@
 
+/*
 $("article").on({
     mouseenter: function () {
         //stuff to do on mouse enter
@@ -11,6 +12,9 @@ $("article").on({
          $('.info-box').html($infoBox);
     }
 });
+*/
+
+
 
 $('article').on('click', function(){
 	$(this).toggleClass('chosen');

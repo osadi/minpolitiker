@@ -16,16 +16,30 @@ if (empty($_POST['mail-body']) ||
 
 include __DIR__ . '/recipients.php';
 
-$chosen = $_POST['chosen'];
+// In case any of our lines are larger than 70 characters, we should use wordwrap()
+//$message = wordwrap($_POST['mail-body'], 70, "\r\n");
+$name    = $_POST['name'];
+$email   = $_POST['email'];
+$message = $_POST['mail-body'];
+$chosen  = $_POST['chosen'];
+$subject = $_POST['subject'];
 
 foreach ($chosen as $id) {
 	$emails[] = $recipients[$id]['email'];
 }
 
-// In case any of our lines are larger than 70 characters, we should use wordwrap()
-$message = wordwrap($_POST['mail-body'], 70, "\r\n");
-
 //mail(implode(',', $emails), 'My subject', $message);
+$headers = 'From: '. $name .' <info@minpolitiker.se>' . "\r\n" .
+    'Reply-To: '.  $replyTo . "\r\n";
+
+$headers = "From: $name <$email> \r\n" .
+	"Sender: info@minpolitiker.se \r\n" .
+	"Return-Path: info@minpolitiker.se \r\n" .
+	"Reply-To: $email \r\n";
+
+$subject = '[TEST] - Du lovade oss';
+
+$result = mail(implode(',', $emails), $subject, $message, $headers);
 
 header('Location: /skickat');
 exit();
