@@ -54,7 +54,7 @@ if (DEBUG == TRUE) {
 	var_dump($headers);
 	die();
 } else {
-	//$result = mail(null, $subject, $message, $headers);
+	$result = mail(null, $subject, $message, $headers);
 	header('Location: /skickat');
 	exit();
 }
