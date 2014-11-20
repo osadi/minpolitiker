@@ -16,8 +16,6 @@ if (empty($_POST['mail-body']) ||
 
 include __DIR__ . '/recipients.php';
 
-// In case any of our lines are larger than 70 characters, we should use wordwrap()
-//$message = wordwrap($_POST['mail-body'], 70, "\r\n");
 $name    = $_POST['name'];
 $email   = $_POST['email'];
 $message = $_POST['mail-body'];
