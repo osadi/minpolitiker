@@ -212,7 +212,26 @@ $recipients = array(
 				'name'  => 'Gun-Britt Persson',
 				'email' => 'gun-britt.persson@boras.se',
 			),
-
+			array(
+				'name'  => 'Anna Klaar',
+				'email' => 'anna.klaar@boras.se',
+			),
+			array(
+				'name'  => 'Mohamed Ben Maaouia',
+				'email' => 'mohamed.ben.maaouia@boras.se ',
+			),
+			array(
+				'name'  => 'Robert Sandberg',
+				'email' => 'robert.sandberg@boras.se',
+			),
+			array(
+				'name'  => 'Johan Dahlberg',
+				'email' => 'johan.dahlberg@boras.se	 ',
+			),
+			array(
+				'name'  => 'Mohamed Kossir',
+				'email' => 'mohamed.kossir@boras.se',
+			),
 		),
 	),
 	array(
