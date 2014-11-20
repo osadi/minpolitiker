@@ -1,0 +1,21 @@
+Options +FollowSymLinks
+
+RewriteEngine on
+
+RewriteBase /
+#RewriteBase /sub-dir/
+#RewriteCond %{REQUEST_URI} ^/sub-dir/(.*)$
+
+RewriteRule ^index.html$ $1 [L,R=301]
+
+RewriteCond $1 !^web
+RewriteRule ^(.*)$ web/$1 [L]
+
+RewriteCond $1 ^web/$
+RewriteCond %{REQUEST_FILENAME}/index.html !-f
+RewriteRule ^(.*)$ web/index.php [L]
+
+RewriteCond $1 !^web/$
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond $1 ^web/(.*)$
+RewriteRule ^(.*)$ web/index.php?path=%1 [L]
